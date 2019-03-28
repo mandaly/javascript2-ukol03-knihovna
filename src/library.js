@@ -60,4 +60,22 @@ export default class Library {
     }
   }
 
+  /* dočíst aktuální knihu */
+  finishCurrentBook(){
+    if (this.currentBook !== null){
+      console.log(this.unreadBooks);
+      read();
+      this.currentBook = this.lastBook;
+      this.currentBook = null;
+      this.unreadBooks --;
+    }
+  }
+
+  listUnreadBooks(){
+    this.allUnreadBooks = [];
+    this.allUnreadBooks = this.bookList.filter(book => !book.isRead);
+    console.log(this.allUnreadBooks);
+  }
+
+
 }
