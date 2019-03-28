@@ -64,8 +64,8 @@ export default class Library {
   finishCurrentBook(){
     if (this.currentBook !== null){
       console.log(this.unreadBooks);
-      read();
-      this.currentBook = this.lastBook;
+      this.currentBook.read();
+      this.lastBook = this.currentBook;
       this.currentBook = null;
       this.unreadBooks --;
     }
